@@ -1,11 +1,9 @@
-Title: $YOUR_POST_TITLE
-LOOOOOOOOOOOOOL
-##############
+Title: My super title
+Date: 2010-12-03 10:20
+Category: Python
+Tags: pelican, publishing
+Slug: my-super-post
+Author: Alexis Metaireau
+Summary: Short version for index and feeds
 
-date: 2010-10-03 10:20
-modified: 2010-10-04 18:40
-tags: thats, awesome
-category: yeah
-slug: my-super-post
-authors: Alexis Metaireau, Conan Doyle
-summary: Short version for index and feeds
+This is the content of my super blog post.
