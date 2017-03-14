@@ -1,4 +1,5 @@
-My super title
+Title: $YOUR_POST_TITLE
+LOOOOOOOOOOOOOL
 ##############
 
 :date: 2010-10-03 10:20
