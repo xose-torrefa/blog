@@ -26,7 +26,7 @@ AUTHOR_FEED_RSS = None
 #         ('You can modify those links in your config file', '#'),)
 
 # Social widget
-SOCIAL = (('twitter', 'http://twitter.com/x0s3'))
+SOCIAL = (('twitter', 'http://twitter.com/x0s3'),)
 
 DEFAULT_PAGINATION = 10
 
