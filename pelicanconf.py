@@ -2,22 +2,28 @@
 # -*- coding: utf-8 -*- #
 from __future__ import unicode_literals
 
-AUTHOR = u'Xose Ribes'
-SITENAME = u'Xose Security'
-SITEURL = ''
+AUTHOR = 'Xose Ribes'
+SITENAME = 'xose security blog'
+SITEURL = 'http://x0se.com'
 THEME = 'Flex'
 PATH = 'content'
-
+SITELOGO = SITEURL + '/images/foto.jpg'
 TIMEZONE = 'Europe/Paris'
+BROWSER_COLOR = '#333333'
+PYGMENTS_STYLE = 'monokai'
 
-DEFAULT_LANG = u'es'
-
+DEFAULT_LANG = 'es'
+I18N_TEMPLATES_LANG = 'es'
 # Feed generation is usually not desired when developing
 FEED_ALL_ATOM = None
 CATEGORY_FEED_ATOM = None
 TRANSLATION_FEED_ATOM = None
 AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
+
+USE_FOLDER_AS_CATEGORY = False
+MAIN_MENU = True
+HOME_HIDE_TAGS = True
 
 # Blogroll
 #LINKS = (('Pelican', 'http://getpelican.com/'),
