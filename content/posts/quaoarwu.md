@@ -170,15 +170,15 @@ Nmap done: 1 IP address (1 host up) scanned in 22.13 seconds
 
 Nos encontramos varios puertos para IMAP curiosos de ver en una máquina de CTF.
 Viendo que hay puerto 80, vamos a entrar en la página web a ver que nos encontramos:
-![Web]({filename}/images/quoar/qaoar1.png)
+![Web]({filename}/images/quaoar/qaoar1.png)
 
 Nos encontramos esta imagen de fondo que es un enlace que nos lleva a otra imagen con el texto "hack the world".
 
 Como siempre, tirando por lo básico voy a checkear robots.txt y nos encontramos con esto:
-![Web]({filename}/images/quoar/robots.png)
+![Web]({filename}/images/quaoar/robots.png)
 
 Pues nada, parece que tenemos un wordpress, vamos a verlo:
-![Web]({filename}/images/quoar/wordpress.png)
+![Web]({filename}/images/quaoar/wordpress.png)
 
 Como podéis ver, hay un post con un link de wikipedia, mientras me hago una wordlist del enlace de wikipedia con cewl, hago un wpscan con enumerate de usuarios para ver que podemos encontrar...
 
