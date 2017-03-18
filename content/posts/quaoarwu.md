@@ -170,7 +170,7 @@ Nmap done: 1 IP address (1 host up) scanned in 22.13 seconds
 
 Nos encontramos varios puertos para IMAP curiosos de ver en una máquina de CTF.
 Viendo que hay puerto 80, vamos a entrar en la página web a ver que nos encontramos:
-![Web]({filename}/images/quaoar/qaoar1.png)
+![Web]({filename}/images/quaoar/quaoar1.png)
 
 Nos encontramos esta imagen de fondo que es un enlace que nos lleva a otra imagen con el texto "hack the world".
 
