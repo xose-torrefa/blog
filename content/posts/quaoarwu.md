@@ -3,7 +3,7 @@ Date: 17/03/2017
 Category: CTF
 Tags: CTF, Writeup
 Author: Xose
-Summary: Writeup del CTF hackfest2016: Quaoar Writeup, descargado en vulnhub: https://www.vulnhub.com/entry/hackfest2016-quaoar,180/
+Summary: Writeup del CTF hackfest2016: Quaoar Writeup, descargado de [vulnhub](https://www.vulnhub.com/entry/hackfest2016-quaoar,180/)
 
 # FLAG 1 - SHELL
 
@@ -168,12 +168,12 @@ Nmap done: 1 IP address (1 host up) scanned in 22.13 seconds
            Raw packets sent: 65555 (2.885MB) | Rcvd: 65551 (2.623MB)
 ```
 
-Nos encontramos varios puertos para IMAP curiosos de ver en una máquina de CTF.
+Nos encontramos varios puertos para IMAP curiosos de ver en una máquina de CTF.  
 Viendo que hay puerto 80, vamos a entrar en la página web a ver que nos encontramos:
 
 ![Web]({filename}/images/quaoar/quaoar1.png)
 
-Nos encontramos esta imagen de fondo que es un enlace que nos lleva a otra imagen con el texto "hack the planet".
+Nos encontramos esta imagen de fondo que es un enlace que nos lleva a otra imagen con el texto "hack the planet".  
 Como siempre, tirando por lo básico voy a checkear robots.txt y nos encontramos con esto:
 ![Web]({filename}/images/quaoar/robots.png)
 
@@ -328,9 +328,9 @@ $ cat flag.txt
 Ya tenemos nuestro primer flag, pero no nos da ninguna pista de como avanzar para encontrar nuestro segundo flag y acceso a root. Me dispongo a mirar de primeras el contenido de la web desde el shell por si me he dejado algo y al entrar en la ruta de la web me encuentro una carpeta llamada uploads, accedo en ella y ahí me encuentro un archivo de configuración, (config.php) vamos a ver que hay dentro:
 ![]({filename}/images/quaoar/configphp.png)
 
-Pues parece que tenemos unas credenciales root:rootpassword!
-Vamos a probar a ver si con suerte podemos acceder con esta contraseña al usuario root.
-Invocamos terminal por python que sino no podemos hacer su y probamos:
+Pues parece que tenemos unas credenciales root:rootpassword!  
+Vamos a probar a ver si con suerte podemos acceder con esta contraseña al usuario root.  
+Invocamos terminal por python que sino no podemos hacer su y probamos:  
 
 ```bash
 $ python -c 'import pty; pty.spawn("/bin/bash")'
@@ -375,9 +375,6 @@ cat /etc/cron.d/*
 
 Y ya podemos dar por completada esta máquina.
 
-Flag 1 - 2bafe61f03117ac66a73c3c514de796e
-
-Flag 2 - 8e3f9ec016e3598c5eec11fd3d73f6fb
-
+Flag 1 - 2bafe61f03117ac66a73c3c514de796e  
+Flag 2 - 8e3f9ec016e3598c5eec11fd3d73f6fb  
 Flag 3 - d46795f84148fd338603d0d6a9dbf8de
-
