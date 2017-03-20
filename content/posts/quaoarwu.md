@@ -12,7 +12,7 @@ Después de hacer un netdiscober para encontrar la IP de la máquina, encuentro 
 Procedo a hacer un nmap:
 
 ```bash
-root@kali-xose:~/Descargas# nmap -T4 -A -v -p- 192.168.110.101
+nmap -T4 -A -v -p- 192.168.110.101
 
 Starting Nmap 7.25BETA2 ( https://nmap.org ) at 2017-03-17 15:48 CET
 NSE: Loaded 140 scripts for scanning.
