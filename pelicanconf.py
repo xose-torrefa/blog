@@ -40,7 +40,7 @@ DEFAULT_PAGINATION = 10
 RELATIVE_URLS = True
 
 EXTRA_PATH_METADATA = {
-    'extra/custom.css': {'path': 'static/custom.css'},
+    'css/custom.css': {'path': 'static/custom.css'},
 }
 
 CUSTOM_CSS = 'static/custom.css'
