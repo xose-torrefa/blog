@@ -1,4 +1,4 @@
-Title: hackfest2016: Quaoar Writeup
+﻿Title: hackfest2016: Quaoar Writeup
 Date: 17/03/2017
 Category: CTF
 Tags: CTF, Writeup
@@ -11,7 +11,7 @@ Después de hacer un netdiscober para encontrar la IP de la máquina, encuentro 
 
 Procedo a hacer un nmap:
 
-```
+```shell
 root@kali-xose:~/Descargas# nmap -T4 -A -v -p- 192.168.110.101
 
 Starting Nmap 7.25BETA2 ( https://nmap.org ) at 2017-03-17 15:48 CET
@@ -182,7 +182,8 @@ Pues nada, parece que tenemos un wordpress, vamos a verlo:
 
 Como podéis ver, hay un post con un link de wikipedia, mientras me hago una wordlist del enlace de wikipedia con cewl, hago un wpscan con enumerate de usuarios para ver que podemos encontrar...
 
-```
+
+```shell
 root@kali-xose:~/Descargas# wpscan --url http://192.168.110.101/wordpress/ --enumerate u
 _______________________________________________________________
         __          _______   _____                  
@@ -301,4 +302,3 @@ _______________________________________________________________
 [+] Memory used: 17.664 MB
 [+] Elapsed time: 00:00:03
 ```
-
