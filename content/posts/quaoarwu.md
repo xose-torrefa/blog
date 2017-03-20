@@ -172,7 +172,7 @@ Nos encontramos varios puertos para IMAP curiosos de ver en una máquina de CTF.
 Viendo que hay puerto 80, vamos a entrar en la página web a ver que nos encontramos:
 ![Web]({filename}/images/quaoar/quaoar1.png)
 
-Nos encontramos esta imagen de fondo que es un enlace que nos lleva a otra imagen con el texto "hack the world".
+Nos encontramos esta imagen de fondo que es un enlace que nos lleva a otra imagen con el texto "hack the planet".
 
 Como siempre, tirando por lo básico voy a checkear robots.txt y nos encontramos con esto:
 ![Web]({filename}/images/quaoar/robots.png)
