@@ -170,10 +170,10 @@ Nmap done: 1 IP address (1 host up) scanned in 22.13 seconds
 
 Nos encontramos varios puertos para IMAP curiosos de ver en una máquina de CTF.
 Viendo que hay puerto 80, vamos a entrar en la página web a ver que nos encontramos:
+
 ![Web]({filename}/images/quaoar/quaoar1.png)
 
 Nos encontramos esta imagen de fondo que es un enlace que nos lleva a otra imagen con el texto "hack the planet".
-
 Como siempre, tirando por lo básico voy a checkear robots.txt y nos encontramos con esto:
 ![Web]({filename}/images/quaoar/robots.png)
 
@@ -376,6 +376,8 @@ cat /etc/cron.d/*
 Y ya podemos dar por completada esta máquina.
 
 Flag 1 - 2bafe61f03117ac66a73c3c514de796e
+
 Flag 2 - 8e3f9ec016e3598c5eec11fd3d73f6fb
+
 Flag 3 - d46795f84148fd338603d0d6a9dbf8de
 
