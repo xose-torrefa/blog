@@ -1,4 +1,4 @@
-﻿Title: hackfest2016: Quaoar Writeup
+Title: hackfest2016: Quaoar Writeup
 Date: 17/03/2017
 Category: CTF
 Tags: CTF, Writeup
@@ -7,7 +7,7 @@ Summary: Writeup del CTF hackfest2016: Quaoar Writeup, descargado de [vulnhub](h
 
 # FLAG 1 - SHELL
 
-Después de hacer un netdiscober para encontrar la IP de la máquina, encuentro la máquina virtual en la IP: 192.168.110.101
+Después de hacer un netdiscover para encontrar la IP de la máquina, encuentro la máquina virtual en la IP: 192.168.110.101
 
 Procedo a hacer un nmap:
 
