@@ -1,4 +1,4 @@
-﻿Title: hackfest2016: Quaoar Writeup
+Title: hackfest2016: Quaoar Writeup
 Date: 17/03/2017
 Category: CTF
 Tags: CTF, Writeup
