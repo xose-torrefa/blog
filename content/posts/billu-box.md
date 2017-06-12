@@ -272,4 +272,4 @@ root
 ```
 
 
-PD: Como he dicho antes, había una forma mucho más rápida de acabar la máquina, pero hasta que no he leído otro writeup de esta máquina no me he dado cuenta. En el paso en el que testeábamos con test.php podríamos haber visto que también nos permitía cargar archivos del sistema, si ubiese puesto en file /etc/passwd nos lo habría descargado, pues en uno de los archivos de configuración de Apache se encontraban unas credenciales de root que nos permitían haber conectado por ssh.
+PD: Como he dicho antes, había una forma mucho más rápida de acabar la máquina, pero hasta que no he leído otro writeup de esta máquina no me he dado cuenta. En el paso en el que testeábamos con test.php podríamos haber visto que también nos permitía cargar archivos del sistema, si hubiese puesto en file /etc/passwd nos lo habría descargado, pues en uno de los archivos de configuración de Apache se encontraban unas credenciales de root que nos permitían haber conectado por ssh.
