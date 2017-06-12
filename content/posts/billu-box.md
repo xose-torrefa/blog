@@ -1,5 +1,5 @@
 Title: CTF - billu: b0x
-Date: 08/06/2017
+Date: 06/12/2017
 Category: CTF
 Tags: CTF, Writeup, Boot2Root
 Author: Xose
