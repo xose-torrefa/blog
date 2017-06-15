@@ -2,12 +2,12 @@
 # -*- coding: utf-8 -*- #
 from __future__ import unicode_literals
 
-AUTHOR = 'Xose Ribes'
+AUTHOR = 'Xose'
 SITENAME = 'xose security blog'
 SITEURL = 'http://x0se.com'
 THEME = 'Flex'
 PATH = 'content'
-SITELOGO = SITEURL + '/images/foto.jpg'
+SITELOGO = SITEURL
 TIMEZONE = 'Europe/Paris'
 BROWSER_COLOR = '#333333'
 PYGMENTS_STYLE = 'monokai'
